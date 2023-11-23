@@ -17,17 +17,13 @@ class DeadlockRunnable extends Thread {
 
     @Override
     public void run() {
-        synchronized (this) {
-            synchronized (this) {
-                synchronized (lockToGrabFirst) {
-                    synchronized (lockToGrabSecond) {
-                        System.out.println(lockToGrabFirst);
-                    }
-
+//        synchronized (this){
+            synchronized (lockToGrabFirst) {
+                synchronized (lockToGrabSecond) {
+                    System.out.println(lockToGrabFirst);
                 }
             }
-        }
-
+//        }
     }
 }
 public class SimpleMonitorDeadlockMain {

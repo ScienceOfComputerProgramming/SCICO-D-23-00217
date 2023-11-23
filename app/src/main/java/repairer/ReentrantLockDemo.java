@@ -19,7 +19,7 @@ public class ReentrantLockDemo {
                 size += newSize;
                 System.out.println(Thread.currentThread().getName() + "---------" + size);
             } finally {
-                lock.unlock();
+//                lock.unlock();
             }
         }
 
@@ -29,7 +29,7 @@ public class ReentrantLockDemo {
                 size -= newSize;
                 System.out.println(Thread.currentThread().getName() + "-----------" + size);
             } finally {
-                lock.unlock();
+//                lock.unlock();
             }
         }
     }

@@ -29,7 +29,7 @@ public class LockTest {
         lock.lock();
         System.out.println("Thread " + threadName + "has got lock");
         methodA();
-        lock.unlock();
+//        lock.unlock();
     }
 
     public void methodA(){
@@ -40,8 +40,7 @@ public class LockTest {
         System.out.println("Thread " + threadName + "has got lock");
         System.out.println("Count of locks held by thread " + threadName +
          " - " + lock.getHoldCount());
-        lock.unlock();
-
+//        lock.unlock();
     }
   }
 }

@@ -8,15 +8,13 @@ class Thread7 extends Thread {
     }
 
     public void run() {
-        synchronized (this) {
-            synchronized (this) {
-                synchronized (l2) {
-                    synchronized (l3) {
-                        System.out.println("x");
-                    }
+//        synchronized (this){
+            synchronized (l2) {
+                synchronized (l3) {
+                    System.out.println("x");
                 }
             }
-        }
+//        }
     }
 }
 
